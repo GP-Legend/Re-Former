@@ -1,0 +1,47 @@
+<%= form_with model: User.find(params[:id]) , url: "/users/:id/edit" do |form| %>
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name, :placeholder => 'Enter a username' %><br><br>
+
+  <%= form.label :email, "E-Mail:" %>
+  <%= form.text_field :email, :placeholder => 'Enter your email' %><br><br>
+
+  <%= form.label :password, "Password:" %>
+  <%= form.password_field :password, :placeholder => 'Enter a strong password' %><br><br>
+
+  <%= form.submit "Submit" %>
+<% end %>
+
+
+
+
+
+<!--When creating a form_tag, do not put a space between the form_tag and ().
+Learned that the hard way. Also, remember to reload the server after changing
+ANY of this stuff.
+<%= form_tag("/users", method: "post")do%>
+  <%= label_tag(:name, "Name: ") %>
+  <%= text_field_tag(:name) %> <br><br>
+
+  <%= label_tag(:email, "Email: ") %>
+  <%= text_field_tag(:email) %> <br><br>
+
+  <%= label_tag(:password, "Password: ") %>
+  <%= password_field_tag(:password) %> <br><br>
+
+  <%= submit_tag("Submit") %>
+<% end %>-->
+
+<!--
+<form accept-charset="UTF-8" method="post" action="/users">
+  <label for="name">User Name:</label>
+  <input type="text" id="userName" name="user[name]"> <br><br>
+
+  <label for="email">E-Mail:</label>
+  <input type="text" id="userEmail" name="user[email]"> <br><br>
+
+
+  <label for="password">Password:</label>
+  <input type="password" id="userPassword" name="user[password]"> <br><br>
+
+  <input type="submit" value="Submit">
+</form>-->
